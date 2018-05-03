@@ -1,0 +1,153 @@
+/*********************************
+**  GENERAL
+**********************************/
+body {
+  box-sizing: border-box;
+  background: whitesmoke;
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.js-hidden {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/*********************************
+**  CONTAINER & ROW
+**********************************/
+.container-box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.row-box {
+  background: white;
+  min-width: 100%;
+  box-shadow: 3px 3px 0 0 #c3c3c385, 
+              6px 6px 0 0 #c3c3c385, 
+              9px 9px 0 0 #c3c3c385;
+  padding: 60px 0 0;
+}
+
+.main-content {
+    padding: 0 30px;
+}
+
+
+/*********************************
+**  IMAGES
+**********************************/
+.img-circle {
+  border-radius: 50%;
+  border: 11px solid white;
+  box-shadow: 2px 3px 20px 2px #e8e8e8;
+  margin-bottom: 20px;
+}
+
+img {
+  transition: .1s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/*********************************
+**  ANSWERS SECTION
+**********************************/
+li {
+  list-style: none;
+  padding: 20px;
+  border-bottom: 1px solid whitesmoke;
+  margin: 3px 0;
+}
+
+li:first-child {
+  border-top: 1px solid whitesmoke;
+}
+
+li:hover {
+  background: #231358;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin-top: 20px;
+}
+
+/*********************************
+**  SCOREBOARD
+**********************************/
+.question-number p {
+  float: left;
+  width: 33%;
+}
+
+.current-score p  {
+  float: right;
+  width: 33%;
+}
+
+/*********************************
+**  BUTTONS
+**********************************/
+.btn {
+  width: 100%;
+  background: #231358;
+  border-radius: 0;
+  border: none;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  margin-top: 30px;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #070721;
+  border: none;
+}
+
+.btn:active {
+  color: white;
+  background-color: #070721;
+  border: none;
+}
+
+/*********************************
+**  MOBILE SETTINGS
+**********************************/
+@media (max-width: 414px) {
+  body {
+    background: white;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .row-box {
+    padding-top: 0;
+    box-shadow: none;
+  }
+  .img-circle {
+    max-width: 150px;
+    border: none;
+  }
+  .btn {
+    width: 75%;
+  }
+}
