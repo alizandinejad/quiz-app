@@ -174,4 +174,13 @@ label {
   .btn {
     width: 75%;
   }
+  #js-question-form .btn  {
+    min-width: 100% !important;
+  }
+  #js-start-button, #js-next-button, #js-finish-button, #js-restart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
