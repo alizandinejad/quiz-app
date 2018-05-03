@@ -43,7 +43,8 @@ h1 {
 }
 
 .main-content {
-    padding: 0 30px;
+  padding: 0 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -67,27 +68,44 @@ img:hover {
 
 /*********************************
 **  ANSWERS SECTION
-**********************************/
-li {
-  list-style: none;
-  padding: 20px;
+*********************************/
+
+.form-check {
   border-bottom: 1px solid whitesmoke;
-  margin: 3px 0;
 }
 
-li:first-child {
+.form-check:first-child {
   border-top: 1px solid whitesmoke;
 }
 
-li:hover {
-  background: #231358;
-  color: white;
+.form-check:last-child {
+  border-bottom: none;
 }
 
-ul {
-  padding: 0;
-  margin-top: 20px;
+.form-check:hover, .form-check:focus-within, .form-check:active, .form-check:focus, .form-check:visited {
+  background: whitesmoke;
+  border: 1px #231358;
 }
+
+.form-check-label {
+  min-width: 100%;
+  padding: 20px;
+}
+
+input[type="radio"]{
+  position: fixed;
+  opacity: 0;
+}
+
+label {
+  margin: 0;
+}
+
+.form-group {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 
 /*********************************
 **  SCOREBOARD
@@ -102,6 +120,10 @@ ul {
   width: 33%;
 }
 
+.question-score {
+    padding: 10px;
+}
+
 /*********************************
 **  BUTTONS
 **********************************/
@@ -114,7 +136,6 @@ ul {
   font-weight: bold;
   font-size: 16px;
   color: white;
-  margin-top: 30px;
 }
 
 .btn:hover {
@@ -128,7 +149,6 @@ ul {
   background-color: #070721;
   border: none;
 }
-
 /*********************************
 **  MOBILE SETTINGS
 **********************************/
