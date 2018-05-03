@@ -82,18 +82,12 @@ img:hover {
 
 .form-check:hover, .form-check:focus-within, .form-check:active, .form-check:focus, .form-check:visited {
   background: whitesmoke;
-  border: 1px #231358;
 }
 
 .form-check-label {
   min-width: 100%;
   padding: 20px;
 }
-
-/*input[type="radio"]{
-  position: fixed;
-  opacity: 0;
-}*/
 
 input[type="radio"]{
   float: left;

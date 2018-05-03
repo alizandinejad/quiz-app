@@ -1,6 +1,7 @@
-///////////////////////////////
-COUNTERS
-///////////////////////////////
+/////////////////////////////////
+// COUNTERS
+/////////////////////////////////
+
 const counter = {
   index: 0, 
   score: 0, 
@@ -8,7 +9,7 @@ const counter = {
   indexUp: () => { counter.index += 1 }, 
   scoreUp: () => { counter.score += 1 }, 
   questionUp: () => { counter.question += 1 },
-  randomResponse: () => { return Math.floor(Math.random() * responses.correct.length) }
+  randomResponse: () => { return num = Math.floor(Math.random() * responses.correct.length) },
 };
 
 /////////////////////////////////
@@ -119,10 +120,12 @@ const render = {
 		`);
 	},
 	correct: () => {
-		render.result(responses.correct[counter.randomResponse()]);
+		render.result(responses.correct.splice(counter.randomResponse(), 1));
+		console.log(responses.correct)
 	},
 	incorrect: () => {
-		render.result(responses.incorrect[counter.randomResponse()]);
+		render.result(responses.incorrect.splice(counter.randomResponse(), 1));
+		console.log(responses.incorrect)
 	},
 	finish: () => {
 		$('#js-finish-section').html(`

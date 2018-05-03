@@ -1,6 +1,6 @@
 const responses = {
   correct: ['Damn right!', 'Wow...You are smart!', 'BOOM! Nice.', 'Yea! Get it girl!', 'YES! Wait... Rick, is that you?' ],
-  incorrect: ['Um...no!', 'Nice try... I guess.', 'For real? No.', 'Smh bruh...', 'No. You been under a rock?', 'Geez...you suck.']
+  incorrect: ['Um...no!', 'Nice try... I guess.', 'For real? No.', 'Smh bruh...', 'No. You been under a rock?']
 };
 
 const quiz = {
