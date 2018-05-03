@@ -47,72 +47,50 @@ const render = {
 		`);
 	},
 	question: () => {
-		// $('#js-question-section').html(`
-		// 	<div class="container-box">
-		// 		<div class="row-box" id="js-question-content">
-		// 			<img src="img/${quiz.questions[counter.index].img}" class="img-circle">
-		// 			<section role="region" class="main-content">
-		// 				<h1>${quiz.questions[counter.index].question}</h1>
-		// 			</section>
-		// 			<section>
-		// 				<ul>
-		// 					<li value="${quiz.questions[counter.index].a}">${quiz.questions[counter.index].a}</li>
-		// 					<li value="${quiz.questions[counter.index].b}">${quiz.questions[counter.index].b}</li>
-		// 					<li value="${quiz.questions[counter.index].c}">${quiz.questions[counter.index].c}</li>
-		// 					<li value="${quiz.questions[counter.index].d}">${quiz.questions[counter.index].d}</li>
-		// 				</ul>
-		// 			</section>
-		// 			<section class="question-score">
-		// 				<span class="question-number"><p>Question ${counter.question} of ${quiz.questions.length}</p><span>
-		// 				<span class="current-score"><p>Current Score: ${counter.score}</p><span>
-		// 			</section>
-		// 		</div>
-		// 	</div>
-		// `);
 		$('#js-question-section').html(`
 			<div class="container-box">
-				<div class="row-box" id="js-question-content">
-					<img src="img/${quiz.questions[counter.index].img}" class="img-circle">
-					<section role="region" class="main-content">
-						<h1>${quiz.questions[counter.index].question}</h1>
-					</section>
-					<section>
-				    <form>
-				      <fieldset class="form-group">
-				        <div class="form-check">
-				          <label class="form-check-label">
-				            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="${quiz.questions[counter.index].a}" checked>
-				            ${quiz.questions[counter.index].a}
-				          </label>
-				        </div>
-				        <div class="form-check">
-				          <label class="form-check-label">
-				            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="${quiz.questions[counter.index].b}" checked>
-				            ${quiz.questions[counter.index].b}
-				          </label>
-				        </div>
-				        <div class="form-check">
-				          <label class="form-check-label">
-				            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="${quiz.questions[counter.index].c}" checked>
-				            ${quiz.questions[counter.index].c}
-				          </label>
-				        </div>
-				        <div class="form-check">
-				          <label class="form-check-label">
-				            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="${quiz.questions[counter.index].d}" checked>
-				            ${quiz.questions[counter.index].d}
-				          </label>
-				        </div>
-				      </fieldset>
-				      <button type="submit" class="btn btn-primary">Submit</button>
-				    </form>
-					</section>
-					<section class="question-score">
-						<span class="question-number"><p>Question ${counter.question} of ${quiz.questions.length}</p><span>
-						<span class="current-score"><p>Current Score: ${counter.score}</p><span>
-					</section>
-				</div>
-			</div>
+			      <div class="row-box" id="js-question-content">
+			        <img src="img/${quiz.questions[counter.index].img}" class="img-circle">
+			        <section role="region" class="main-content">
+			          <h1>${quiz.questions[counter.index].question}</h1>
+			        </section>
+			        <section>
+			          <form id="js-question-form">
+			            <fieldset class="form-group">
+			              <div class="form-check">
+			                <label class="form-check-label">
+			                  <input type="radio" class="form-check-input" name="radio-input" id="radio-input" value="${quiz.questions[counter.index].a}" unchecked>
+			                  ${quiz.questions[counter.index].a}
+			                </label>
+			              </div>
+			              <div class="form-check">
+			                <label class="form-check-label">
+			                  <input type="radio" class="form-check-input" name="radio-input" id="radio-input" value="${quiz.questions[counter.index].b}" unchecked>
+			                  ${quiz.questions[counter.index].b}
+			                </label>
+			              </div>
+			              <div class="form-check">
+			                <label class="form-check-label">
+			                  <input type="radio" class="form-check-input" name="radio-input" id="radio-input" value="${quiz.questions[counter.index].c}" unchecked>
+			                  ${quiz.questions[counter.index].c}
+			                </label>
+			              </div>
+			              <div class="form-check">
+			                <label class="form-check-label">
+			                  <input type="radio" class="form-check-input" name="radio-input" id="radio-input" value="${quiz.questions[counter.index].d}" unchecked>
+			                  ${quiz.questions[counter.index].d}
+			                </label>
+			              </div>
+			            </fieldset>
+			            <button type="submit" class="btn btn-primary">Submit</button>
+			          </form>
+			        </section>
+			        <section class="question-score">
+			          <span class="question-number"><p>Question ${counter.question} of ${quiz.questions.length}</p></span>
+			          <span class="current-score"><p>Current Score: ${counter.score}</p></span>
+			        </section>
+			      </div>
+			    </div>
 		`);
 	},
 	result: element => {
@@ -216,10 +194,46 @@ const click = {
 /////////////////////////////////
 // USER INPUT: GET & REACT
 /////////////////////////////////
+// const user = {
+// 	input: () => {
+// 		$('#js-question-section').on('click', 'li', event => {
+// 			let input = $(event.target).attr('value');
+// 			let count = quiz.questions.length - 1;
+
+// 			view.hide('#js-question-section');
+// 			view.show('#js-result-section');
+
+// 			if (counter.index < count) {
+// 				if (input === quiz.questions[counter.index].answer) {
+// 					display.correct();
+// 					counter.scoreUp();
+// 				} else {
+// 					display.incorrect();
+// 				}
+// 			} else if (counter.index === count) {
+// 				if (input === quiz.questions[counter.index].answer) {
+// 					display.correct();
+// 					counter.scoreUp();
+// 				} else {
+// 					display.incorrect();
+// 				}
+// 				view.hide('#js-next-button');
+// 				view.show('#js-finish-button');
+// 				click.finish();
+// 				display.finish();
+// 				click.restart();
+// 			}
+// 		});
+// 		click.next();
+// 	},
+// };
+
 const user = {
 	input: () => {
-		$('#js-question-section').on('click', 'li', event => {
-			let input = $(event.target).attr('value');
+		$(document).on('submit', 'form', function(event) {
+			event.preventDefault();
+
+			let input = $('#radio-input:checked').val();
 			let count = quiz.questions.length - 1;
 
 			view.hide('#js-question-section');
@@ -257,8 +271,8 @@ const launch = {
 	start: () => {
 		display.start();
 		click.start();
-		display.question();
 		user.input();
+		display.question();
 	},
 };
 
