@@ -4,8 +4,7 @@ const responses = {
 };
 
 const quiz = {
-  questions: [
-  {
+  questions: [{
     question: 'What is Scary Terry\'s catchphrase?',
     a: 'I\'m your worste nightmare!',
     b: 'Welcome to your nightmare, bitch!',
@@ -59,6 +58,5 @@ const quiz = {
     img: 'morty.jpg',
     img2: 'morty-2.jpg',
     explanation: 'Although the information is easily accesible, not much has been revealed about Morty\'s past life. Currently, Morty is 14 years old, and as of the beginning of the series, Rick Sanchez had been mysteriously missing from the family for a total of 14 years. It is unknown if Morty\'s birth and Rick\'s disappearance are linked to each other, but it has been shown on two seprate occasions that Rick knew Morty when he was only a baby'
-  },
-  ]
+  },]
 };

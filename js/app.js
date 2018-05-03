@@ -24,6 +24,15 @@ const view = {
 };
 
 /////////////////////////////////
+// FOCUS ON ELEMENTS
+/////////////////////////////////
+const focusOn = {
+	form: () => {
+		$('input').focus();
+	},
+};
+
+/////////////////////////////////
 // RENDER ELEMENT HTML
 /////////////////////////////////
 const render = {
@@ -166,7 +175,7 @@ const click = {
 			view.hide('#js-start-section');
 			view.show('#js-question-section');
 			display.question();
-			focus.form();
+			focusOn.form();
 		});
 	},
 	next: () => {
@@ -177,7 +186,7 @@ const click = {
 			display.question();
 			view.hide('#js-result-section');
 			view.show('#js-question-section');
-						focus.form();
+			focusOn.form();
 		});
 	},
 	finish: () => {
@@ -232,15 +241,6 @@ const user = {
 			}
 		});
 		click.next();
-	},
-};
-
-/////////////////////////////////
-// FOCUS ON ELEMENTS
-/////////////////////////////////
-const focus = {
-	form: () => {
-		$('input').focus();
 	},
 };
 
