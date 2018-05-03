@@ -120,11 +120,11 @@ const render = {
 		`);
 	},
 	correct: () => {
-		render.result(responses.correct.splice(counter.randomResponse(), 1));
+		render.result(responses.correct[counter.randomResponse()]);
 		console.log(responses.correct)
 	},
 	incorrect: () => {
-		render.result(responses.incorrect.splice(counter.randomResponse(), 1));
+		render.result(responses.incorrect[counter.randomResponse()]);
 		console.log(responses.incorrect)
 	},
 	finish: () => {
