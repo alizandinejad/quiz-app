@@ -28,7 +28,7 @@ const view = {
 /////////////////////////////////
 const focusOn = {
 	form: () => {
-		$('input').focus();
+		$('#js-question-form input').focus();
 	},
 };
 
